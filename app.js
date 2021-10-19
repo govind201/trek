@@ -38,5 +38,9 @@ app.use(function (err, _req, res, _next) {
   res.status(500).send('Internal Server Error', err);
 });
 
+app.get("*", (req, res) => {
+    res.send("Invalid path"):
+});
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`listen on Port ${port}`));
