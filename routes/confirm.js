@@ -8,7 +8,7 @@ const { config } = require('winston');
 
 router.post(
   '/:token',
-  asyncMiddleware((req, res) => {
+  asyncMiddleware(async (req, res) => {
     const { error } = validate(req.body);
     if (error) return res.status(404).send(error.details[0].message);
 
