@@ -3,7 +3,7 @@ const Joi = require('joi');
 const { stateSchema } = require('../models/state');
 const { join } = require('path');
 
-const placeShema = mongoose.Schema({
+const placeShema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
